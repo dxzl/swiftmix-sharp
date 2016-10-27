@@ -1,4 +1,13 @@
-﻿using System;
+﻿//---------------------------------------------------------------------------
+// SwiftMiX - Automatically fade songs between two playlists using
+// dual Windows Media Player Active-X controls.
+//
+// Author: Scott Swift
+//
+// Released to GitHub under GPL v3 October, 2016
+//
+//---------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
