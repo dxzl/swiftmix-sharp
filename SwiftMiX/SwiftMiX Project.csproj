@@ -14,36 +14,37 @@
     <TargetZone>LocalIntranet</TargetZone>
     <GenerateManifests>false</GenerateManifests>
     <StartupObject>SwiftMiX.Program</StartupObject>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>DC76FE74977124E95C2E7D98EBFDA333BFD783A3</ManifestCertificateThumbprint>
     <ManifestKeyFile>DtsSPC.pfx</ManifestKeyFile>
-    <SignManifests>true</SignManifests>
-    <SignAssembly>true</SignAssembly>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation />
-    <PublishUrl>ftp://www.yahcolorize.com/httpdocs/testbed/</PublishUrl>
+    <PublishUrl>C:\Users\Scott\Documents\Visual Studio 2017\Projects\SwiftMiX\Deploy\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://www.yahcolorize.com/testbed/</InstallUrl>
     <SupportUrl>http://www.yahcolorize.com/index.htm</SupportUrl>
     <ProductName>SwiftMiX</ProductName>
     <PublisherName>Scott M. Swift</PublisherName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\SwiftMiX.ico</ApplicationIcon>
@@ -89,116 +90,154 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CtrlChars.cs" />
-    <Compile Include="ColumnSorter.cs" />
-    <Compile Include="ExportClass.cs" />
-    <Compile Include="FormExport.cs">
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageComboBox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\ImageComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaTags, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\MediaTags.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaglibSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\TaglibSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="TorboSS.DockableForm, Version=1.0.2.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\TorboSS.DockableForm.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\Unicode.dll</HintPath>
+    </Reference>
+    <Reference Include="WinMediaLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\x86DLLs\WinMediaLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\CtrlChars.cs" />
+    <Compile Include="src\ColumnSorter.cs" />
+    <Compile Include="src\ExportClass.cs" />
+    <Compile Include="src\FormExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormExport.Designer.cs">
+    <Compile Include="src\FormExport.Designer.cs">
       <DependentUpon>FormExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormImport.cs">
+    <Compile Include="src\FormImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormImport.Designer.cs">
+    <Compile Include="src\FormImport.Designer.cs">
       <DependentUpon>FormImport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInfo.cs">
+    <Compile Include="src\FormInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInfo.Designer.cs">
+    <Compile Include="src\FormInfo.Designer.cs">
       <DependentUpon>FormInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFilters.cs">
+    <Compile Include="src\FormFilters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFilters.Designer.cs">
+    <Compile Include="src\FormFilters.Designer.cs">
       <DependentUpon>FormFilters.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="src\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="src\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPlaylist.cs">
+    <Compile Include="src\FormPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPlaylist.Designer.cs">
+    <Compile Include="src\FormPlaylist.Designer.cs">
       <DependentUpon>FormPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLicense.cs">
+    <Compile Include="src\FormLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLicense.Designer.cs">
+    <Compile Include="src\FormLicense.Designer.cs">
       <DependentUpon>FormLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAbout.cs">
+    <Compile Include="src\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAbout.Designer.cs">
+    <Compile Include="src\FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFind.cs">
+    <Compile Include="src\FormFind.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFind.Designer.cs">
+    <Compile Include="src\FormFind.Designer.cs">
       <DependentUpon>FormFind.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDirectories.cs">
+    <Compile Include="src\FormDirectories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDirectories.Designer.cs">
+    <Compile Include="src\FormDirectories.Designer.cs">
       <DependentUpon>FormDirectories.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStatus.cs">
+    <Compile Include="src\FormStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatus.Designer.cs">
+    <Compile Include="src\FormStatus.Designer.cs">
       <DependentUpon>FormStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImportClass.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\ImportClass.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelativeDir.cs" />
+    <Compile Include="src\RelativeDir.cs" />
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="FormExport.resx">
+    <EmbeddedResource Include="src\FormExport.resx">
       <DependentUpon>FormExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormImport.resx">
+    <EmbeddedResource Include="src\FormImport.resx">
       <DependentUpon>FormImport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInfo.resx">
+    <EmbeddedResource Include="src\FormInfo.resx">
       <DependentUpon>FormInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFilters.resx">
+    <EmbeddedResource Include="src\FormFilters.resx">
       <DependentUpon>FormFilters.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="src\FormMain.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPlaylist.resx">
+    <EmbeddedResource Include="src\FormPlaylist.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormPlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLicense.resx">
+    <EmbeddedResource Include="src\FormLicense.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAbout.resx">
+    <EmbeddedResource Include="src\FormAbout.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFind.resx">
+    <EmbeddedResource Include="src\FormFind.resx">
       <DependentUpon>FormFind.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDirectories.resx">
+    <EmbeddedResource Include="src\FormDirectories.resx">
       <DependentUpon>FormDirectories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStatus.resx">
+    <EmbeddedResource Include="src\FormStatus.resx">
       <DependentUpon>FormStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -213,9 +252,6 @@
     </Compile>
     <None Include="app.config" />
     <EmbeddedResource Include="app.manifest" />
-    <None Include="bin\Release\SwiftMiX.exe.config" />
-    <None Include="bin\Release\SwiftMiX.vshost.exe.config" />
-    <None Include="bin\Release\SwiftMiX.vshost.exe.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,20 +263,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Release\AxInterop.WMPLib.dll" />
-    <Content Include="bin\Release\FileAssociation.dll" />
-    <Content Include="bin\Release\ImageComboBox.dll" />
-    <Content Include="bin\Release\Interop.IasHelperLib.dll" />
-    <Content Include="bin\Release\Interop.IWshRuntimeLibrary.dll" />
-    <Content Include="bin\Release\Interop.MediaPlayer.dll" />
-    <Content Include="bin\Release\Interop.WMPLib.dll" />
-    <Content Include="bin\Release\MediaCatalog.dll" />
-    <Content Include="bin\Release\SwiftMiX.exe" />
-    <Content Include="bin\Release\SwiftMiX.pdb" />
-    <Content Include="bin\Release\SwiftMiX.vshost.exe" />
-    <Content Include="bin\Release\taglib-sharp.dll" />
-    <Content Include="bin\Release\Torbo.DockableForm.dll" />
-    <Content Include="bin\Release\Unicode.dll" />
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\SwiftMiX1.bmp" />
     <None Include="Resources\SwiftMiXlogoR1.gif" />
     <Content Include="Resources\35FLOPPY.ICO" />
@@ -259,6 +309,7 @@
     <Content Include="Resources\Recycle.bmp" />
     <Content Include="Resources\Refresh.bmp" />
     <Content Include="Resources\SwiftMiX.ico" />
+    <Content Include="SwiftMiX.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -281,71 +332,13 @@
     <BaseApplicationManifest Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
+    <Folder Include="bin\x86\Debug\" />
+    <Folder Include="bin\x86\Release\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\AxInterop.WMPLib.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageComboBox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\ImageComboBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.WMPLib">
-      <HintPath>x86DLLs\Interop.WMPLib.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="MediaTags, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\MediaTags.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="TaglibSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\TaglibSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="TorboSS.DockableForm, Version=1.0.2.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\TorboSS.DockableForm.dll</HintPath>
-    </Reference>
-    <Reference Include="Unicode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>x86DLLs\Unicode.dll</HintPath>
-    </Reference>
-    <Reference Include="WinMediaLib">
-      <HintPath>x86DLLs\WinMediaLib.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="IWshRuntimeLibrary">
-      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="stdole">
-      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftMiX Project", "SwiftMiX\SwiftMiX Project.csproj", "{B6246C3C-C538-4E56-9A17-E4674C45042E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SwiftMiX Installer", "SwiftMiX Installer\SwiftMiX Installer.vdproj", "{E0E8C7BB-443D-48A7-BB61-2098587271D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,15 @@ Global
 		{B6246C3C-C538-4E56-9A17-E4674C45042E}.Release|x64.Build.0 = Release|x64
 		{B6246C3C-C538-4E56-9A17-E4674C45042E}.Release|x86.ActiveCfg = Release|x86
 		{B6246C3C-C538-4E56-9A17-E4674C45042E}.Release|x86.Build.0 = Release|x86
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Debug|Any CPU.ActiveCfg = Debug
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Debug|x64.ActiveCfg = Debug
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Debug|x86.ActiveCfg = Debug
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Release|Any CPU.ActiveCfg = Release
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Release|Mixed Platforms.ActiveCfg = Release
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Release|x64.ActiveCfg = Release
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Release|x86.ActiveCfg = Release
+		{E0E8C7BB-443D-48A7-BB61-2098587271D9}.Release|x86.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
