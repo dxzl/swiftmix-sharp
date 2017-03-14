@@ -3,5 +3,7 @@ SwiftMiX is for Windows PCs and laptops. It is a music player based around two W
 
 ## requirements;
 I have included the requisite dlls and resourses in zip-files. Read Readme.txt...
-To build both SwiftMiX and its MSI installer, set the solution target to "Release" and "x86" then right-click "SwiftMiX Installer" and choose "Rebuild". The output msi installer will go to the ".\SwiftMiX Installer\Release" folder.
+To build both SwiftMiX and its MSI installer, set the solution target to "Release" and "x86".
+Right-click "SwiftMiX" and choose "Rebuild" then right-click "SwiftMiX Installer" and choose "Rebuild".
+The output msi installer will be in the ".\SwiftMiX Installer\Release" folder.
 

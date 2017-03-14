@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SwiftMiX</RootNamespace>
     <AssemblyName>SwiftMiX</AssemblyName>
-    <ApplicationIcon>SwiftMiX.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\SwiftMiX.ico</ApplicationIcon>
     <TargetZone>LocalIntranet</TargetZone>
     <GenerateManifests>false</GenerateManifests>
     <StartupObject>SwiftMiX.Program</StartupObject>
@@ -309,7 +309,7 @@
     <Content Include="Resources\Recycle.bmp" />
     <Content Include="Resources\Refresh.bmp" />
     <Content Include="Resources\SwiftMiX.ico" />
-    <Content Include="SwiftMiX.ico" />
+    <Content Include="Resources\SwiftMiX.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

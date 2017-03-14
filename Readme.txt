@@ -26,7 +26,6 @@ This can be found under COM Objects "Scripthost Object Model"
 
 Important! If you are building the installer, you must set the target to "Release" and "x86"!
 
-To buils with installer, right-click the "SwiftMiX Installer" project and choose "Rebuild"
-The SwiftMiX.msi Windows installer will be in "SwiftMiX Installer\Release"
+To build with installer, first right-click the "SwiftMiX" project and choose "Rebuild", then right-click the "SwiftMiX Installer" project and choose "Rebuild". The SwiftMiX.msi Windows installer will be in "SwiftMiX Installer\Release".
 
 Questions? Contact author: dxzl@live.com
