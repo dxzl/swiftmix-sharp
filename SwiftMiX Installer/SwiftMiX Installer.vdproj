@@ -28,7 +28,7 @@
         "Entry"
         {
         "MsmKey" = "8:_0D64C02863433C6542980B10A66A82B4"
-        "OwnerKey" = "8:_E1310CF5F78146E2B05B3F40F4EB68AC"
+        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_0D64C02863433C6542980B10A66A82B4"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_E1310CF5F78146E2B05B3F40F4EB68AC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -172,61 +172,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D8D7CABF6AB802DF532393734BE9CC18"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5B361B6B8495113F9697A186D96C8154"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3F851D400B446A773CF90D8C5D971B0C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A4E451258460266BF97A35C51F29E6E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E5F55949384CCC27858BC48F07F806C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BB1620FD937E3282C4180B847FDE9450"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_64983703C8CF3EB6B0FEF4AA18968D43"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_681D9D20CAC94D2184DE59731508A3D1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_91108B89BCE2C95029F4F026E054C4FE"
+        "OwnerKey" = "8:_B14994C6F554D808F2ED705AFEE7EFAA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -238,7 +184,61 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B14994C6F554D808F2ED705AFEE7EFAA"
+        "OwnerKey" = "8:_91108B89BCE2C95029F4F026E054C4FE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_681D9D20CAC94D2184DE59731508A3D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_64983703C8CF3EB6B0FEF4AA18968D43"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BB1620FD937E3282C4180B847FDE9450"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8E5F55949384CCC27858BC48F07F806C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5A4E451258460266BF97A35C51F29E6E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3F851D400B446A773CF90D8C5D971B0C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5B361B6B8495113F9697A186D96C8154"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D8D7CABF6AB802DF532393734BE9CC18"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -343,11 +343,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_0D64C02863433C6542980B10A66A82B4"
-                    {
-                    "Name" = "8:Interop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.WMPLib.dll"
             "TargetName" = "8:"
@@ -374,11 +369,6 @@
             "AssemblyAsmDisplayName" = "8:MediaTags, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_3F851D400B446A773CF90D8C5D971B0C"
-                    {
-                    "Name" = "8:MediaTags.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MediaTags.dll"
             "TargetName" = "8:"
@@ -425,11 +415,6 @@
             "AssemblyAsmDisplayName" = "8:WinMediaLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_5A4E451258460266BF97A35C51F29E6E"
-                    {
-                    "Name" = "8:WinMediaLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:WinMediaLib.dll"
             "TargetName" = "8:"
@@ -456,11 +441,6 @@
             "AssemblyAsmDisplayName" = "8:TorboSS.DockableForm, Version=1.0.2.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_5B361B6B8495113F9697A186D96C8154"
-                    {
-                    "Name" = "8:TorboSS.DockableForm.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:TorboSS.DockableForm.dll"
             "TargetName" = "8:"
@@ -487,11 +467,6 @@
             "AssemblyAsmDisplayName" = "8:ImageComboBox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_64983703C8CF3EB6B0FEF4AA18968D43"
-                    {
-                    "Name" = "8:ImageComboBox.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ImageComboBox.dll"
             "TargetName" = "8:"
@@ -518,11 +493,6 @@
             "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_681D9D20CAC94D2184DE59731508A3D1"
-                    {
-                    "Name" = "8:AxInterop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AxInterop.WMPLib.dll"
             "TargetName" = "8:"
@@ -549,11 +519,6 @@
             "AssemblyAsmDisplayName" = "8:TaglibSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_8E5F55949384CCC27858BC48F07F806C"
-                    {
-                    "Name" = "8:TaglibSharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:TaglibSharp.dll"
             "TargetName" = "8:"
@@ -600,11 +565,6 @@
             "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_91108B89BCE2C95029F4F026E054C4FE"
-                    {
-                    "Name" = "8:AxInterop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AxInterop.WMPLib.dll"
             "TargetName" = "8:"
@@ -631,11 +591,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_BB1620FD937E3282C4180B847FDE9450"
-                    {
-                    "Name" = "8:Interop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.WMPLib.dll"
             "TargetName" = "8:"
@@ -662,11 +617,6 @@
             "AssemblyAsmDisplayName" = "8:Unicode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_D8D7CABF6AB802DF532393734BE9CC18"
-                    {
-                    "Name" = "8:Unicode.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Unicode.dll"
             "TargetName" = "8:"
@@ -693,11 +643,6 @@
             "AssemblyAsmDisplayName" = "8:SwiftMiX, Version=1.73.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_E1310CF5F78146E2B05B3F40F4EB68AC"
-                    {
-                    "Name" = "8:SwiftMiX.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\SwiftMiX\\bin\\x86\\Release\\SwiftMiX.exe"
             "TargetName" = "8:"
@@ -773,15 +718,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SwiftMiX"
-        "ProductCode" = "8:{B53E291D-3577-4A6E-B387-4C35009C1439}"
-        "PackageCode" = "8:{2B779DC2-2033-4DF0-BB3E-615662EF9BE9}"
+        "ProductCode" = "8:{2B9FBDF9-2B37-4A05-8DDC-2A83930511ED}"
+        "PackageCode" = "8:{C6003699-657F-44C2-A456-82B6D1D80BF2}"
         "UpgradeCode" = "8:{BC09B001-2D4D-4927-BC33-B20410497D79}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.73.1"
+        "ProductVersion" = "8:1.73.2"
         "Manufacturer" = "8:Discrete-Time Systems"
         "ARPHELPTELEPHONE" = "8:dxzl@live.com"
         "ARPHELPLINK" = "8:"
@@ -851,13 +796,27 @@
                         {
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_A7379858FF344CF2A33C1A798C066036"
                             {
-                            "Name" = "8:[Manufacturer]"
+                            "Name" = "8:Discrete-Time Systems"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_463B8D149CF245FE856F87ED9454A863"
+                                    {
+                                    "Name" = "8:SwiftMiX"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:TRUE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
                                 }
                                 "Values"
                                 {
@@ -1333,7 +1292,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_050BC04AED464803844EDF0E4D6658E5"
             {
-            "SourcePath" = "8:..\\SwiftMiX\\obj\\x86\\Release\\SwiftMiX.exe"
+            "SourcePath" = "8:..\\SwiftMiX\\obj\\x86\\Debug\\SwiftMiX.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_621D06691D9B432B92868824A47A04EC"
