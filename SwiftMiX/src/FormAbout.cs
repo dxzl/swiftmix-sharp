@@ -37,11 +37,52 @@ namespace SwiftMiX
 
     private void label3_Click(object sender, EventArgs e)
     {
+      //if (!FormMain.FREEWARE)
+      //{
+      //  try
+      //  {
+      //    LicenseKey lk = new LicenseKey(f1);
+
+      //    if (!lk.DoKey(false))
+      //      lk.ValidateLicenseKey(false); // Revalidate old existing key if new key was bad.
+
+      //    this.PrintDaysRemaining();
+      //  }
+      //  catch
+      //  {
+      //  }
+      //}
     }
 
     private void PrintDaysRemaining()
     {
-      this.Text = "V" + f1.Version + " - License Days: (No Expiration)";
+      string S;
+
+      //if (FormMain.FREEWARE)
+      //{
+        S = "V" + f1.Version + " - License Days: (No Expiration)";
+      //}
+      //else
+      //{
+      //  int DaysRem = f1.pk.ComputeDaysRemaining();
+
+      //  // -100 if failure
+      //  if (DaysRem >= 0 || DaysRem > LK_DISPLAY_UNLIMITTED_DAYS)
+      //  {
+      //    S = "V" + f1.Version + " - License Days: ";
+
+      //    if (DaysRem >= LK_DISPLAY_UNLIMITTED_DAYS)
+      //      S += "(No Expiration)";
+      //    else if (DaysRem == 0)
+      //      S += "(License Expired)";
+      //    else
+      //      S += DaysRem.ToString();
+      //  }
+      //  else
+      //    S = "V" + f1.Version + " - (Invalid License)";
+      //}
+
+      this.Text = S;
     }
   }
 }

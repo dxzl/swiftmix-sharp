@@ -55,6 +55,12 @@ namespace SwiftMiX
         {
             if (f == null) return (0);
 
+            //if (!FormMain.FREEWARE && f1.pk.ComputeDaysRemaining() <= 0)
+            //{
+            //    MessageBox.Show("Trial Expired: " + FormMain.WEBSITE.ToString());
+            //    return (0);
+            //}
+
             int len = f.clbCount;
 
             if (len == 0)
@@ -129,6 +135,12 @@ namespace SwiftMiX
         //---------------------------------------------------------------------------
         public int ExportNoDialog(List<string> sl, string fileName)
         {
+            //if (!FormMain.FREEWARE && f1.pk.ComputeDaysRemaining() <= 0)
+            //{
+            //    MessageBox.Show("Trial Expired: " + FormMain.WEBSITE.ToString());
+            //    return 0;
+            //}
+
             //FormPlaylist f, String uListFullPath, int Mode, bool bSaveAsUtf8, bool bUncPathFormat
             return WriteXml(sl, fileName, 2, true, false); // filenames only
         }

@@ -47,6 +47,12 @@ namespace SwiftMiX
             if (f == null)
                 return 0;
 
+            //if (!FormMain.FREEWARE && f1.pk.ComputeDaysRemaining() <= 0)
+            //{
+            //    MessageBox.Show("Trial Expired: " + FormMain.WEBSITE.ToString());
+            //    return 0;
+            //}
+
             int Count = 0;
 
             //// Read tag info
@@ -119,6 +125,13 @@ namespace SwiftMiX
             if (!System.IO.File.Exists(fileName))
                 return 0;
 
+            string Ext = Path.GetExtension(fileName).ToLower();
+
+            // HAVE to filter this of all sorts of files would be streamed in - album art, thumbnails... NOT Good!
+            if (Ext != ".wpl" && Ext != ".m3u8" && Ext != ".m3u" && Ext != ".asx" &&
+                    Ext != ".xspf" && Ext != ".wax" && Ext != ".wmx" && Ext != ".pls" && Ext != ".txt")
+                return 0;
+
             int Count = 0;
 
             try
@@ -131,7 +144,20 @@ namespace SwiftMiX
                 switch (encodingIndex)
                 {
                     case -1: // Auto
-                        enc = utf8Checker.Check(fileName) ? Encoding.UTF8 : Encoding.Default;
+
+                        if (Ext == ".m3u8")
+                            enc = Encoding.UTF8;
+                        else
+                        {
+                            enc = GetEncoding(fileName);
+
+                            // if encoding is ascii - see if it's "really" UTF-8...
+                            if (enc == Encoding.ASCII)
+                            {
+                                try { enc = utf8Checker.Check(fileName) ? Encoding.UTF8 : Encoding.ASCII; }
+                                catch { return 0; }
+                            }
+                        }
                         break;
                     case 0:
                         enc = Encoding.UTF8;
@@ -169,8 +195,6 @@ namespace SwiftMiX
 
                 r.Close();
 
-                string Ext = Path.GetExtension(fileName).ToLower();
-
                 List<string> slSongsToAdd;
 
                 if (Ext == ".pls")
@@ -202,7 +226,7 @@ namespace SwiftMiX
                         {
                             if (!SongIsInList(fB, song))
                                 if (AddFile(fB, song, fileName))
-                                Count++;
+                                    Count++;
                         }
                     }
                 }
@@ -236,6 +260,37 @@ namespace SwiftMiX
             }
 
             return Count;
+        }
+        //---------------------------------------------------------------------------
+        /// <summary>
+        /// Determines a text file's encoding by analyzing its byte order mark (BOM).
+        /// Defaults to ASCII when detection of the text file's endianness fails.
+        /// </summary>
+        /// <param name="filename">The text file to analyze.</param>
+        /// <returns>The detected encoding.</returns>
+        public Encoding GetEncoding(string filename)
+        {
+            try
+            {
+                // Read the BOM
+                var bom = new byte[4];
+                using (var file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+                {
+                    file.Read(bom, 0, 4);
+                }
+
+                // Analyze the BOM
+                if (bom[0] == 0x2b && bom[1] == 0x2f && bom[2] == 0x76) return Encoding.UTF7;
+                if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf) return Encoding.UTF8;
+                if (bom[0] == 0xff && bom[1] == 0xfe) return Encoding.Unicode; //UTF-16LE
+                if (bom[0] == 0xfe && bom[1] == 0xff) return Encoding.BigEndianUnicode; //UTF-16BE
+                if (bom[0] == 0 && bom[1] == 0 && bom[2] == 0xfe && bom[3] == 0xff) return Encoding.UTF32;
+                return Encoding.ASCII;
+            }
+            catch
+            {
+                return Encoding.ASCII;
+            }
         }
         //---------------------------------------------------------------------------
         // Winamp playlist-files
@@ -282,7 +337,7 @@ namespace SwiftMiX
                                     if (urlLen > 2 && sUrl.StartsWith("\"") && sUrl.EndsWith("\""))
                                     {
                                         sUrl = sUrl.Substring(1, urlLen - 2); // trim off the quotes
-                                        // sUrl = sUrl.Trim(); leave quoted text as-is
+                                                                              // sUrl = sUrl.Trim(); leave quoted text as-is
                                         urlLen = sUrl.Length;
                                     }
 

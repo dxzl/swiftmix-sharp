@@ -47,7 +47,7 @@
     </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\SwiftMiX.ico</ApplicationIcon>
+    <ApplicationIcon>SwiftMiX.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -278,7 +278,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
@@ -291,6 +291,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SwiftMiX.ico" />
     <None Include="Resources\SwiftMiX1.bmp" />
     <None Include="Resources\SwiftMiXlogoR1.gif" />
     <Content Include="Resources\35FLOPPY.ICO" />

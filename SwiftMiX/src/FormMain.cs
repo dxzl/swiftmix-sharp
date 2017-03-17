@@ -21,6 +21,8 @@ namespace SwiftMiX
     {
         #region Constants
 
+//        internal const bool FREEWARE = true; // Set false to add the license-key code
+
         internal const string TRIAL_EMAIL = "SwiftMiX@trial.com";
 
         // FormDirictories default size
@@ -34,7 +36,7 @@ namespace SwiftMiX
 
         // No changes, just rebuilt for VS2012 Express on Windows 7 and packaged with NSIS
         // Don't forget to change version in Properties->Assembly Information also!
-        internal const string REVISION = "1.73"; // Released 7/22/2016
+        internal const string REVISION = "1.74"; // Released 3/17/2017
 
         internal const string HELPSITE = "http://www.yahcolorize.com/SwiftMiX/help/help2.htm";
         internal const string WEBSITE = "http://www.yahcolorize.com/SwiftMiX/";
@@ -101,6 +103,9 @@ namespace SwiftMiX
         private bool g_bAutoFade, g_bNormalFade, g_bSendTelemetry, g_bRootFolderHasBeenSet;
         private string g_sLicenseKey, g_sRootFolder, g_sFileFilters;
         private Size g_formDirectoriesSize;
+
+        // Public
+        //public KeyClass pk = null;
 
         #endregion
 
@@ -301,6 +306,9 @@ namespace SwiftMiX
                     Application.ExitThread();
                 }
 
+                // Create License Key vars and methods
+                //pk = new KeyClass();
+
                 // Using Torbo.DockableForm.dll
                 // 1) Added it to the project (move dll to project
                 //    directory, right-click Torbo.DockableForm.dll
@@ -346,6 +354,19 @@ namespace SwiftMiX
                     "Microsoft's Windows Media-Player!");
                 Application.ExitThread();
             }
+
+            //if (!FREEWARE)
+            //{
+            //    bool bRet;
+            //    LicenseKey lk = new LicenseKey(this);
+            //    bRet = lk.ValidateLicenseKey(false);
+
+            //    if (!bRet)
+            //    {
+            //        MessageBox.Show("Critical error in class: TLicenseKey!");
+            //        Application.ExitThread();
+            //    }
+            //}
 
             TimeDisplay(0, 0);
             TimeDisplay(0, 1);
@@ -2124,6 +2145,12 @@ namespace SwiftMiX
             if (listA == null || listB == null)
                 return false;
 
+            //if (!FREEWARE && pk.ComputeDaysRemaining() <= 0)
+            //{
+            //    MessageBox.Show("License Expired: " + FormMain.WEBSITE.ToString());
+            //    return false;
+            //}
+
             if (browserDialog != null)
             {
                 try
@@ -2786,6 +2813,12 @@ namespace SwiftMiX
         //---------------------------------------------------------------------------
         void exportSongFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if (!FREEWARE && pk.ComputeDaysRemaining() <= 0)
+            //{
+            //    MessageBox.Show("License Expired: " + FormMain.WEBSITE.ToString());
+            //    return;
+            //}
+
             // Copy all song-list files to directory user selects
             if ((listA != null && listA.clbCount != 0) ||
               (listB != null && listB.clbCount != 0))
