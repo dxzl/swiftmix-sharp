@@ -30,7 +30,8 @@ namespace SwiftMiX
 
       try
       {
-        Application.EnableVisualStyles();
+        Application.EnableVisualStyles(); // comment out to enable classic style
+                Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled;
         Application.SetCompatibleTextRenderingDefault(false);
         Application.Run(new FormMain());
       }

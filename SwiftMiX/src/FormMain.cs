@@ -36,10 +36,10 @@ namespace SwiftMiX
 
         // No changes, just rebuilt for VS2012 Express on Windows 7 and packaged with NSIS
         // Don't forget to change version in Properties->Assembly Information also!
-        internal const string REVISION = "1.74"; // Released 3/17/2017
+        internal const string REVISION = "1.75"; // Released 3/17/2017
 
-        internal const string HELPSITE = "http://www.yahcolorize.com/SwiftMiX/help/help2.htm";
-        internal const string WEBSITE = "http://www.yahcolorize.com/SwiftMiX/";
+        internal const string HELPSITE = "http://www.yahcolorize.com/swiftmix/help/help2.htm";
+        internal const string WEBSITE = "http://www.yahcolorize.com/swiftmix/";
         internal const string SWIFTMIX = @"\SwiftMiX";
         internal const string SWIFTMIX2 = "SwiftMiX";
         internal const string SHORTCUT_FILE = @"SwiftMiX.lnk";

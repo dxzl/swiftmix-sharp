@@ -10,16 +10,16 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SwiftMiX</RootNamespace>
     <AssemblyName>SwiftMiX</AssemblyName>
-    <ApplicationIcon>Resources\SwiftMiX.ico</ApplicationIcon>
+    <ApplicationIcon>SwiftMiX.ico</ApplicationIcon>
     <TargetZone>LocalIntranet</TargetZone>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
     <StartupObject>SwiftMiX.Program</StartupObject>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>DC76FE74977124E95C2E7D98EBFDA333BFD783A3</ManifestCertificateThumbprint>
-    <ManifestKeyFile>DtsSPC.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>67E2B13C181ECA84342030DA517949FFCB333DCC</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DtsUWP.pfx</ManifestKeyFile>
     <SignManifests>false</SignManifests>
-    <SignAssembly>false</SignAssembly>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -47,7 +47,7 @@
     </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>SwiftMiX.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\SwiftMiX.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -57,6 +57,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -66,6 +67,7 @@
     <DebugType>pdbonly</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
@@ -75,6 +77,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
@@ -84,24 +87,13 @@
     <DebugType>pdbonly</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\AxInterop.WMPLib.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageComboBox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\ImageComboBox.dll</HintPath>
-    </Reference>
-    <Reference Include="MediaTags, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\MediaTags.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -110,22 +102,6 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TaglibSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\TaglibSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="TorboSS.DockableForm, Version=1.0.2.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\TorboSS.DockableForm.dll</HintPath>
-    </Reference>
-    <Reference Include="Unicode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\Unicode.dll</HintPath>
-    </Reference>
-    <Reference Include="WinMediaLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a8d680f595046d32, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\x86DLLs\WinMediaLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\CtrlChars.cs" />
@@ -201,7 +177,7 @@
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\RelativeDir.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="src\Settings.cs" />
     <EmbeddedResource Include="src\FormExport.resx">
       <DependentUpon>FormExport.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +228,7 @@
     </Compile>
     <None Include="app.config" />
     <EmbeddedResource Include="app.manifest" />
+    <None Include="DtsUWP.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,7 +255,16 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
@@ -289,9 +275,17 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="WMPLib1">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SwiftMiX.ico" />
     <None Include="Resources\SwiftMiX1.bmp" />
     <None Include="Resources\SwiftMiXlogoR1.gif" />
     <Content Include="Resources\35FLOPPY.ICO" />
@@ -309,7 +303,6 @@
     <Content Include="Resources\MyComputer.bmp" />
     <Content Include="Resources\Recycle.bmp" />
     <Content Include="Resources\Refresh.bmp" />
-    <Content Include="Resources\SwiftMiX.ico" />
     <Content Include="Resources\SwiftMiX.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +330,32 @@
     <Folder Include="bin\x64\Release\" />
     <Folder Include="bin\x86\Debug\" />
     <Folder Include="bin\x86\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ImageComboBox\ImageComboBox\ImageComboBox.csproj">
+      <Project>{33d6ff5d-c30c-4976-b35d-98cdf7519ba0}</Project>
+      <Name>ImageComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MediaTagSharp\src\MediaTags\MediaTags.csproj">
+      <Project>{f0426bab-cbdf-448f-8a49-35f5e94bd076}</Project>
+      <Name>MediaTags</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MediaTagSharp\src\Taglib-Sharp\TaglibSharp.csproj">
+      <Project>{6b143a39-c7b2-4743-9917-92262c60e9a6}</Project>
+      <Name>TaglibSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MediaTagSharp\src\WinMediaLib\WinMediaLib.csproj">
+      <Project>{55f32df2-0e4b-4e03-9a02-c511854c4199}</Project>
+      <Name>WinMediaLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TorboSS.DockableForm\TorboSS.DockableForm\TorboSS.DockableForm.csproj">
+      <Project>{730DE542-6539-483B-9D71-2E8D002446EF}</Project>
+      <Name>TorboSS.DockableForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utf8Checker\Unicode.csproj">
+      <Project>{53a39ed2-bdcf-4223-a7bb-1724ea6a0a53}</Project>
+      <Name>Unicode</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
