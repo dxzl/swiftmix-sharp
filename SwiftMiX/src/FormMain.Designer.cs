@@ -94,37 +94,37 @@ namespace SwiftMiX
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDummyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDockPlaylistsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AutoFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTips = new System.Windows.Forms.ToolTip(this.components);
             this.axWindowsMP1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.axWindowsMP2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericFadeSpeed = new System.Windows.Forms.NumericUpDown();
+            this.numericFadePoint = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.numericFadeSpeed = new System.Windows.Forms.NumericUpDown();
-            this.numericFadePoint = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMP2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFadeSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFadePoint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -136,11 +136,11 @@ namespace SwiftMiX
             this.playerAToolStripMenuItem,
             this.playerBToolStripMenuItem,
             this.optionsToolStripMenuItem,
-            this.toolStripTextBox1,
-            this.dockToolStripMenuItem1});
+            this.toolStripDummyMenuItem,
+            this.toolStripDockPlaylistsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(321, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(323, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -720,13 +720,13 @@ namespace SwiftMiX
             this.toolStripMenuItem13.Text = "Restore Factory Settings";
             this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
-            // toolStripTextBox1
+            // toolStripDummyMenuItem
             // 
-            this.toolStripTextBox1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDummyMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dockToolStripMenuItem});
-            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(12, 20);
+            this.toolStripDummyMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripDummyMenuItem.Name = "toolStripDummyMenuItem";
+            this.toolStripDummyMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // dockToolStripMenuItem
             // 
@@ -734,15 +734,15 @@ namespace SwiftMiX
             this.dockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.dockToolStripMenuItem.Text = "Dock";
             // 
-            // dockToolStripMenuItem1
+            // toolStripDockPlaylistsMenuItem
             // 
-            this.dockToolStripMenuItem1.AutoToolTip = true;
-            this.dockToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dockToolStripMenuItem1.Name = "dockToolStripMenuItem1";
-            this.dockToolStripMenuItem1.Size = new System.Drawing.Size(91, 20);
-            this.dockToolStripMenuItem1.Text = "Dock Playlists";
-            this.dockToolStripMenuItem1.ToolTipText = "Re-attach Song-List windows";
-            this.dockToolStripMenuItem1.Click += new System.EventHandler(this.dockToolStripMenuItem1_Click);
+            this.toolStripDockPlaylistsMenuItem.AutoToolTip = true;
+            this.toolStripDockPlaylistsMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.toolStripDockPlaylistsMenuItem.Name = "toolStripDockPlaylistsMenuItem";
+            this.toolStripDockPlaylistsMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.toolStripDockPlaylistsMenuItem.Text = "Dock Playlists";
+            this.toolStripDockPlaylistsMenuItem.ToolTipText = "Re-attach Song-List windows";
+            this.toolStripDockPlaylistsMenuItem.Click += new System.EventHandler(this.dockToolStripMenuItem1_Click);
             // 
             // AutoFadeTimer
             // 
@@ -758,12 +758,11 @@ namespace SwiftMiX
             // 
             // axWindowsMP1
             // 
-            this.axWindowsMP1.Dock = System.Windows.Forms.DockStyle.Top;
             this.axWindowsMP1.Enabled = true;
-            this.axWindowsMP1.Location = new System.Drawing.Point(0, 24);
+            this.axWindowsMP1.Location = new System.Drawing.Point(0, 25);
             this.axWindowsMP1.Name = "axWindowsMP1";
             this.axWindowsMP1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMP1.OcxState")));
-            this.axWindowsMP1.Size = new System.Drawing.Size(321, 45);
+            this.axWindowsMP1.Size = new System.Drawing.Size(323, 45);
             this.axWindowsMP1.TabIndex = 12;
             this.axWindowsMP1.OpenStateChange += new AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler(this.axWindowsMP1_OpenStateChange);
             this.axWindowsMP1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMP1_PlayStateChange);
@@ -772,12 +771,11 @@ namespace SwiftMiX
             // 
             // axWindowsMP2
             // 
-            this.axWindowsMP2.Dock = System.Windows.Forms.DockStyle.Top;
             this.axWindowsMP2.Enabled = true;
-            this.axWindowsMP2.Location = new System.Drawing.Point(0, 69);
+            this.axWindowsMP2.Location = new System.Drawing.Point(0, 72);
             this.axWindowsMP2.Name = "axWindowsMP2";
             this.axWindowsMP2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMP2.OcxState")));
-            this.axWindowsMP2.Size = new System.Drawing.Size(321, 45);
+            this.axWindowsMP2.Size = new System.Drawing.Size(323, 45);
             this.axWindowsMP2.TabIndex = 13;
             this.axWindowsMP2.OpenStateChange += new AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler(this.axWindowsMP2_OpenStateChange);
             this.axWindowsMP2.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMP2_PlayStateChange);
@@ -791,109 +789,10 @@ namespace SwiftMiX
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.trackBar1);
-            this.panel1.Location = new System.Drawing.Point(0, 115);
+            this.panel1.Location = new System.Drawing.Point(2, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(321, 50);
             this.panel1.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.progressBar1);
-            this.panel2.Controls.Add(this.statusStrip1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 169);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 45);
-            this.panel2.TabIndex = 15;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.AllowMerge = false;
-            this.statusStrip1.AutoSize = false;
-            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3,
-            this.toolStripStatusLabel4,
-            this.toolStripStatusLabel5});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 20);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(323, 25);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 9;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(61, 29);
-            this.toolStripStatusLabel1.Spring = true;
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(61, 29);
-            this.toolStripStatusLabel2.Spring = true;
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(61, 29);
-            this.toolStripStatusLabel3.Spring = true;
-            this.toolStripStatusLabel3.Text = "Auto";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(61, 29);
-            this.toolStripStatusLabel4.Spring = true;
-            // 
-            // toolStripStatusLabel5
-            // 
-            this.toolStripStatusLabel5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(61, 29);
-            this.toolStripStatusLabel5.Spring = true;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.AccessibleDescription = "SwiftMiX Progress Bar";
-            this.progressBar1.AccessibleName = "SwiftMiX Progress Bar";
-            this.progressBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
-            this.progressBar1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.progressBar1.Location = new System.Drawing.Point(0, 3);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(318, 14);
-            this.progressBar1.TabIndex = 10;
-            this.progressBar1.Visible = false;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.AccessibleDescription = "SwiftMiX Slider";
-            this.trackBar1.AccessibleName = "SwiftMiX Slider";
-            this.trackBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.Slider;
-            this.trackBar1.Location = new System.Drawing.Point(72, 3);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(237, 45);
-            this.trackBar1.TabIndex = 17;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // numericFadeSpeed
             // 
@@ -917,6 +816,7 @@ namespace SwiftMiX
             0,
             0,
             0});
+            this.numericFadeSpeed.ValueChanged += new System.EventHandler(this.numericFadeSpeed_ValueChanged);
             // 
             // numericFadePoint
             // 
@@ -945,12 +845,13 @@ namespace SwiftMiX
             0,
             0,
             0});
+            this.numericFadePoint.ValueChanged += new System.EventHandler(this.numericFadePoint_ValueChanged);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(3, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 19;
@@ -961,12 +862,113 @@ namespace SwiftMiX
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(3, 21);
+            this.label2.Location = new System.Drawing.Point(3, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "T";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.AccessibleDescription = "SwiftMiX Slider";
+            this.trackBar1.AccessibleName = "SwiftMiX Slider";
+            this.trackBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.Slider;
+            this.trackBar1.Location = new System.Drawing.Point(72, 2);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(237, 45);
+            this.trackBar1.TabIndex = 17;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.progressBar1);
+            this.panel2.Controls.Add(this.statusStrip1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 175);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(323, 45);
+            this.panel2.TabIndex = 15;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.AccessibleDescription = "SwiftMiX Progress Bar";
+            this.progressBar1.AccessibleName = "SwiftMiX Progress Bar";
+            this.progressBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
+            this.progressBar1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.progressBar1.Location = new System.Drawing.Point(2, 3);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(318, 14);
+            this.progressBar1.TabIndex = 10;
+            this.progressBar1.Visible = false;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.AllowMerge = false;
+            this.statusStrip1.AutoSize = false;
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3,
+            this.toolStripStatusLabel4,
+            this.toolStripStatusLabel5});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 20);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(323, 25);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 9;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel2.Spring = true;
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel3.Spring = true;
+            this.toolStripStatusLabel3.Text = "Auto";
+            this.toolStripStatusLabel3.Click += new System.EventHandler(this.toolStripStatusLabel3_Click);
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel4.Spring = true;
+            // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(61, 20);
+            this.toolStripStatusLabel5.Spring = true;
             // 
             // FormMain
             // 
@@ -977,10 +979,10 @@ namespace SwiftMiX
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(207)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(321, 214);
+            this.ClientSize = new System.Drawing.Size(323, 220);
+            this.Controls.Add(this.axWindowsMP2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.axWindowsMP2);
             this.Controls.Add(this.axWindowsMP1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -1006,12 +1008,12 @@ namespace SwiftMiX
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMP2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFadeSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFadePoint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFadeSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFadePoint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1078,9 +1080,9 @@ namespace SwiftMiX
       private System.Windows.Forms.ToolStripMenuItem randomToolStripMenuItemA;
       private System.Windows.Forms.ToolStripMenuItem randomToolStripMenuItemB;
       private System.Windows.Forms.ToolStripMenuItem eliminateDuplicatesToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem toolStripTextBox1;
+      private System.Windows.Forms.ToolStripMenuItem toolStripDummyMenuItem;
       private System.Windows.Forms.ToolStripMenuItem dockToolStripMenuItem;
-      private System.Windows.Forms.ToolStripMenuItem dockToolStripMenuItem1;
+      private System.Windows.Forms.ToolStripMenuItem toolStripDockPlaylistsMenuItem;
       private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
       private System.Windows.Forms.ToolStripMenuItem equalizePlaylistsToolStripMenuItem;
       private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

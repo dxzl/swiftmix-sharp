@@ -36,7 +36,7 @@ namespace SwiftMiX
 
         // No changes, just rebuilt for VS2012 Express on Windows 7 and packaged with NSIS
         // Don't forget to change version in Properties->Assembly Information also!
-        internal const string REVISION = "1.75"; // Released 3/17/2017
+        internal const string REVISION = "1.76"; // Released 12/14/2019
 
         internal const string HELPSITE = "http://www.yahcolorize.com/swiftmix/help/help2.htm";
         internal const string WEBSITE = "http://www.yahcolorize.com/swiftmix/";
@@ -153,12 +153,12 @@ namespace SwiftMiX
             get { return this.g_bAutoFade; }
         }
 
-        public int SetVA
+        public int VolA
         {
             get { return this.g_iVolumeA; }
         }
 
-        public int SetVB
+        public int VolB
         {
             get { return this.g_iVolumeB; }
         }
@@ -598,7 +598,7 @@ namespace SwiftMiX
                             iFadeSpeed = (int)key.GetValue("iFadeSpeed", iFadeSpeed);
                             iFadePoint = (int)key.GetValue("iFadePoint", iFadePoint);
                             iVolumeA = (int)key.GetValue("iVolumeA", iVolumeA);
-                            iVolumeB = (int)key.GetValue("iVolumeB", iVolumeA);
+                            iVolumeB = (int)key.GetValue("iVolumeB", iVolumeB);
                             sLicenseKey = (string)key.GetValue("sLicenseKey", sLicenseKey);
                             sRootFolder = (string)key.GetValue("sRootFolder", sRootFolder);
                             sFileFilters = (string)key.GetValue("sFileFilters", sFileFilters);
@@ -1715,19 +1715,8 @@ namespace SwiftMiX
         }
         //---------------------------------------------------------------------------
 
-        public void RunIexplore(string s)
-        {
-            System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            proc.EnableRaisingEvents = false;
-            proc.StartInfo.FileName = "iexplore";
-            proc.StartInfo.Arguments = s;
-            proc.Start();
-        }
-        //---------------------------------------------------------------------------
-
         void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
-            //      this.RunIexplore(HELPSITE);
             Process.Start(HELPSITE);
         }
         //---------------------------------------------------------------------------
@@ -1743,6 +1732,12 @@ namespace SwiftMiX
         // Get any key press value...
         {
             keyPressed = e.KeyChar;
+        }
+
+        //---------------------------------------------------------------------------
+        private void toolStripStatusLabel3_Click(object sender, EventArgs e)
+        {
+            faderModeAutoToolStripMenuItem_Click(null, null);
         }
 
         #endregion
@@ -2397,6 +2392,7 @@ namespace SwiftMiX
                 faderModeAutoToolStripMenuItem.Checked = true;
                 faderModeAutoToolStripMenuItem.Text = "Fader Mode: Auto";
                 forceFadeToolStripMenuItem.Enabled = true;
+                toolStripStatusLabel3.Text = "Auto";
             }
             else
             {
@@ -2405,6 +2401,7 @@ namespace SwiftMiX
                 faderModeAutoToolStripMenuItem.Checked = false;
                 faderModeAutoToolStripMenuItem.Text = "Fader Mode: Manual";
                 forceFadeToolStripMenuItem.Enabled = false;
+                toolStripStatusLabel3.Text = "Manual";
             }
         }
         //---------------------------------------------------------------------------
@@ -2801,7 +2798,6 @@ namespace SwiftMiX
         //---------------------------------------------------------------------------
         void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //      this.RunIexplore(HELPSITE);
             Process.Start(WEBSITE);
         }
         //---------------------------------------------------------------------------
@@ -3100,6 +3096,7 @@ namespace SwiftMiX
                 catch { }
             }
         }
+
         //---------------------------------------------------------------------------
         //void CreateUninstaller()
         //{
@@ -3348,52 +3345,7 @@ namespace SwiftMiX
         //---------------------------------------------------------------------------
         void numericFadePoint_ValueChanged(object sender, EventArgs e)
         {
-            g_iFadePoint = (int)numericFadePoint.Value;
 
-            if (g_iFadePoint == 0) // we don't allow 0...
-            {
-                if (oldFade < 0) // this tells us which way the user is scrolling
-                    g_iFadePoint = 1;
-                else
-                    g_iFadePoint = -1;
-
-                numericFadePoint.Value = g_iFadePoint;
-            }
-
-            int temp = g_iFadePoint;
-
-            if (temp > 0) // fade before end
-            {
-                yellowStatusTime = (int)temp + 20;
-                redStatusTime = g_iFadePoint + 5;
-            }
-            else // fade after start
-            {
-                temp = -temp;
-
-                yellowStatusTime = temp - 10;
-
-                if (yellowStatusTime == 0)
-                    yellowStatusTime = -1;
-                else
-                    yellowStatusTime = -yellowStatusTime;
-
-                redStatusTime = temp - 5;
-
-                if (redStatusTime == 0)
-                    redStatusTime = -1;
-                else
-                    redStatusTime = -redStatusTime;
-            }
-
-            // Limit fade-time to be shorter than the remaining time for the fade
-            if (g_iFadePoint >= temp) // fade-time higher than fade-start-point?
-            {
-                g_iFadePoint = temp - 1;
-                numericFadeSpeed.Value = g_iFadePoint;
-            }
-
-            oldFade = g_iFadePoint;
         }
         //---------------------------------------------------------------------------
         void toolStripMenuItem13_Click(object sender, EventArgs e)
