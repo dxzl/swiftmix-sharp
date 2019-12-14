@@ -36,7 +36,7 @@ namespace SwiftMiX
 
         // No changes, just rebuilt for VS2012 Express on Windows 7 and packaged with NSIS
         // Don't forget to change version in Properties->Assembly Information also!
-        internal const string REVISION = "1.76"; // Released 12/14/2019
+        internal const string REVISION = "1.77"; // Released 12/14/2019
 
         internal const string HELPSITE = "http://www.yahcolorize.com/swiftmix/help/help2.htm";
         internal const string WEBSITE = "http://www.yahcolorize.com/swiftmix/";
@@ -92,7 +92,6 @@ namespace SwiftMiX
         private string filesDirA, filesDirB;
         private bool bNormalFade = true; // user-set fader center-fade mode
         private int yellowStatusTime, redStatusTime;
-        private int oldFade = 10;
         private int RWM_SwiftMixPlay = 0;
         private int RWM_SwiftMixTime = 0;
         private int RWM_SwiftMixState = 0;
@@ -540,7 +539,6 @@ namespace SwiftMiX
 
             numericFadeSpeed.Value = NUMERIC_FADESPEED;
             numericFadePoint.Value = NUMERIC_FADEPOINT;
-            oldFade = NUMERIC_FADEPOINT;
 
             trackBar1.Value = TRACKBAR_MINIMUM;
 

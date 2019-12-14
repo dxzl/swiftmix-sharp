@@ -31,6 +31,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.75.0.0")]
-[assembly: AssemblyFileVersion("1.75.0.0")]
+[assembly: AssemblyVersion("1.77.0.0")]
+[assembly: AssemblyFileVersion("1.77.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
