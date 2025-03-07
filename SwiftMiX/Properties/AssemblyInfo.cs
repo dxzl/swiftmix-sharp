@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Discrete-Time Systems")]
 [assembly: AssemblyProduct("SwiftMiX")]
-[assembly: AssemblyCopyright("Copyright © 2020")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,6 +31,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.77.0.0")]
-[assembly: AssemblyFileVersion("1.77.0.0")]
+[assembly: AssemblyVersion("1.80.0.0")]
+[assembly: AssemblyFileVersion("1.80.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
