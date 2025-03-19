@@ -10,14 +10,14 @@ namespace SwiftMiX
         // Dec 31, 2099 - Jan 1, 1980 (around 120 years)
         public const int LK_DISPLAY_UNLIMITTED_DAYS = (2488082 - 2444588);
 
-        private FormMain f1 = null;
+        private FormMain parentForm = null;
 
-        public FormAbout(FormMain f)
+        public FormAbout(FormMain ParentForm)
         {
             InitializeComponent();
 
-            f1 = f;
-            this.Owner = f1;
+            parentForm = ParentForm;
+            this.Owner = parentForm;
 
             this.PrintDaysRemaining();
 
@@ -28,12 +28,12 @@ namespace SwiftMiX
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Process.Start(FormMain.HELPSITE);
+            parentForm.DoHelp();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Process.Start(FormMain.HELPSITE);
+            parentForm.DoHelp();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace SwiftMiX
             //{
             //  try
             //  {
-            //    LicenseKey lk = new LicenseKey(f1);
+            //    LicenseKey lk = new LicenseKey(parentForm);
 
             //    if (!lk.DoKey(false))
             //      lk.ValidateLicenseKey(false); // Revalidate old existing key if new key was bad.
@@ -61,16 +61,16 @@ namespace SwiftMiX
 
             //if (FormMain.FREEWARE)
             //{
-            S = "V" + f1.Version + " - License Days: (No Expiration)";
+            S = "V" + parentForm.Version + " - License Days: (No Expiration)";
             //}
             //else
             //{
-            //  int DaysRem = f1.pk.ComputeDaysRemaining();
+            //  int DaysRem = parentForm.pk.ComputeDaysRemaining();
 
             //  // -100 if failure
             //  if (DaysRem >= 0 || DaysRem > LK_DISPLAY_UNLIMITTED_DAYS)
             //  {
-            //    S = "V" + f1.Version + " - License Days: ";
+            //    S = "V" + parentForm.Version + " - License Days: ";
 
             //    if (DaysRem >= LK_DISPLAY_UNLIMITTED_DAYS)
             //      S += "(No Expiration)";
@@ -80,7 +80,7 @@ namespace SwiftMiX
             //      S += DaysRem.ToString();
             //  }
             //  else
-            //    S = "V" + f1.Version + " - (Invalid License)";
+            //    S = "V" + parentForm.Version + " - (Invalid License)";
             //}
 
             this.Text = S;

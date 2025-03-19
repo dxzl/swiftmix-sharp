@@ -7,9 +7,9 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SwiftMiX")]
-[assembly: AssemblyDescription("Live Music Mixer For Dual Windows Media Players")]
+[assembly: AssemblyDescription("Dual WMP Music player/mixer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Discrete-Time Systems")]
+[assembly: AssemblyCompany("Discrete-Time Systems (Scott Swift)")]
 [assembly: AssemblyProduct("SwiftMiX")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -31,6 +31,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.80.0.0")]
+[assembly: AssemblyVersion("1.81")]
 [assembly: AssemblyFileVersion("1.80.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]

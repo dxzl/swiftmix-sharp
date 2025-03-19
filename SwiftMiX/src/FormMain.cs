@@ -1,17 +1,34 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics; // "Process" needs this...
+using System.Diagnostics; // DoHelp() needs this...
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Linq;
+using System.Collections;
+using System.Net;
 using AxWMPLib;
 using TorboSS;
 using MediaTags;
 using Microsoft.Win32;
-using System.Net;
+using IWshRuntimeLibrary;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Management.Instrumentation;
+using System.Security.Policy;
+using TagLib.Mpeg;
+using TagLib.Mpeg4;
+using TagLib.Ogg.Codecs;
+using TagLib.Riff;
 
 namespace SwiftMiX
 {
@@ -19,9 +36,25 @@ namespace SwiftMiX
 
     public partial class FormMain : DockableForm
     {
+        #region HelpTxt
+        // this is retained FYI because I can use the "help embedded in exe" approach on other projects...
+        //public static readonly string[] HELPHTMLTXT = {
+        //    "<!DOCTYPE HTML>",
+        //    "<html>",
+        //    "<head>",
+        //    "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>",
+        //    "<meta name=\"generator\" content=\"7.55.2.3\"/>",
+        //    "</head>",
+        //    "<body bgcolor=\"#0000AA\" leftmargin=\"10\" topmargin=\"10\">",
+        //    "<pre style=\"font-family: 'Courier New', monospace; font-size: 14pt; white-space: pre;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 85, 255);\"><span style=\"font-family: 'Courier New';\"><span style=\"font-size: 14pt;\">                                                      </span></span></span>",
+        //    "<span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 85, 255);\"><span style=\"font-family: 'Courier New';\"><span style=\"font-size: 14pt;\">                                                      </span></span></span></pre>",
+        //    "</body>",
+        //    "</html>"};
+        #endregion
+
         #region Constants
 
-//        internal const bool FREEWARE = true; // Set false to add the license-key code
+        //        internal const bool FREEWARE = true; // Set false to add the license-key code
 
         internal const string TRIAL_EMAIL = "SwiftMiX@trial.com";
 
@@ -36,10 +69,11 @@ namespace SwiftMiX
 
         // No changes, just rebuilt for VS2012 Express on Windows 7 and packaged with NSIS
         // Don't forget to change version in Properties->Assembly Information also!
-        internal const string REVISION = "1.80"; // Released 10/31/2020
+        internal const string REVISION = "1.81"; // Released 03/19/2025
 
-        internal const string HELPSITE = "http://www.yahcolorize.com/swiftmix/help/help2.htm";
-        internal const string WEBSITE = "http://www.yahcolorize.com/swiftmix/";
+        //internal const string HELPSITE = "http://www.yahcolorize.com/swiftmix/help/help2.htm";
+        //internal const string WEBSITE = "https://github.com/dxzl/swiftmix-sharp";
+        internal const string HELPFILENAME = @"\help.html";
         internal const string SWIFTMIX = @"\SwiftMiX";
         internal const string SWIFTMIX2 = "SwiftMiX";
         internal const string SHORTCUT_FILE = @"SwiftMiX.lnk";
@@ -90,6 +124,7 @@ namespace SwiftMiX
 
         // Private
         private string filesDirA, filesDirB;
+        //private string g_tmpHelpFilePath;
         private bool bNormalFade = true; // user-set fader center-fade mode
         private int yellowStatusTime, redStatusTime;
         private int RWM_SwiftMixPlay = 0;
@@ -302,7 +337,7 @@ namespace SwiftMiX
                 if (!SetVolumes())
                 {
                     MessageBox.Show("Re-Install Windows Media Player 10 or above!");
-                    Application.ExitThread();
+                    System.Windows.Forms.Application.ExitThread();
                 }
 
                 // Create License Key vars and methods
@@ -329,7 +364,7 @@ namespace SwiftMiX
             catch
             {
                 MessageBox.Show("Re-Install Windows Media Player 10 or above!");
-                Application.ExitThread();
+                System.Windows.Forms.Application.ExitThread();
             }
 
             try
@@ -344,14 +379,14 @@ namespace SwiftMiX
                     MessageBox.Show("Sorry, you must get the newest version of\n" +
                       "Microsoft's Windows Media-Player!\n" +
                       "Your version is: " + Info);
-                    Application.ExitThread();
+                    System.Windows.Forms.Application.ExitThread();
                 }
             }
             catch
             {
                 MessageBox.Show("You must get the new version of\n" +
                     "Microsoft's Windows Media-Player!");
-                Application.ExitThread();
+                System.Windows.Forms.Application.ExitThread();
             }
 
             //if (!FREEWARE)
@@ -503,6 +538,14 @@ namespace SwiftMiX
 
             // Save settings
             RegistryWrite();
+        }
+        //---------------------------------------------------------------------------
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+//            if (System.IO.File.Exists(g_tmpHelpFilePath))
+//            {
+//                System.IO.File.Delete(g_tmpHelpFilePath);
+//            }
         }
         //---------------------------------------------------------------------------
         void RegistryRead(bool bReset = false)
@@ -1627,6 +1670,28 @@ namespace SwiftMiX
 
         #region Misc
 
+        public void DoHelp()
+        {
+//            if (!System.IO.File.Exists(g_tmpHelpFilePath))
+//            {
+//                g_tmpHelpFilePath = Path.GetTempPath() + Guid.NewGuid().ToString() + ".html";
+//            }
+            try
+            {
+                //                var sl = new List<string>(HELPHTMLTXT.ToList());
+                //                System.IO.File.WriteAllLines(g_tmpHelpFilePath, sl);
+                //                Process.Start(g_tmpHelpFilePath);
+                string sFile = Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath) + HELPFILENAME;
+                //MessageBox.Show(sFile);
+                Process.Start(sFile);
+            }
+            catch
+            {
+
+            }
+        }
+        //---------------------------------------------------------------------------
+
         public bool ForceFade()
         // Manually initiate an "auto-fade"
         // Also triggers next Queued song
@@ -1712,13 +1777,11 @@ namespace SwiftMiX
             return true;
         }
         //---------------------------------------------------------------------------
-
         void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
-            Process.Start(HELPSITE);
+            DoHelp();
         }
         //---------------------------------------------------------------------------
-
         void trackBar1_ValueChanged(object sender, EventArgs e)
         {
             // Fader Moved
@@ -2796,7 +2859,7 @@ namespace SwiftMiX
         //---------------------------------------------------------------------------
         void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(WEBSITE);
+            DoHelp();
         }
         //---------------------------------------------------------------------------
         void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3095,6 +3158,11 @@ namespace SwiftMiX
             }
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
         //---------------------------------------------------------------------------
         //void CreateUninstaller()
         //{
@@ -3258,9 +3326,9 @@ namespace SwiftMiX
 
                     string temp = listA.clbItem(ii);
 
-                    if (File.Exists(listA.clbItem(ii)) &&
-                           !File.Exists(path + @"\" + Path.GetFileName(temp)))
-                        File.Copy(temp, path + @"\" + Path.GetFileName(temp));
+                    if (System.IO.File.Exists(listA.clbItem(ii)) &&
+                           !System.IO.File.Exists(path + @"\" + Path.GetFileName(temp)))
+                        System.IO.File.Copy(temp, path + @"\" + Path.GetFileName(temp));
 
                     alA.Add(Path.GetFileName(temp));
                 }
@@ -3277,9 +3345,9 @@ namespace SwiftMiX
 
                     string temp = this.listB.clbItem(ii);
 
-                    if (File.Exists(this.listB.clbItem(ii)) &&
-                           !File.Exists(path + @"\" + Path.GetFileName(temp)))
-                        File.Copy(temp, path + @"\" + Path.GetFileName(temp));
+                    if (System.IO.File.Exists(this.listB.clbItem(ii)) &&
+                           !System.IO.File.Exists(path + @"\" + Path.GetFileName(temp)))
+                        System.IO.File.Copy(temp, path + @"\" + Path.GetFileName(temp));
 
                     alB.Add(Path.GetFileName(temp));
                 }
@@ -3562,7 +3630,7 @@ namespace SwiftMiX
     }
     #endregion
 
-    // Not Used!!!
+    // Not Used (retained for FYI)!!!
     #region DLLImports
 
     // This works ok but I want to stay with .NET!

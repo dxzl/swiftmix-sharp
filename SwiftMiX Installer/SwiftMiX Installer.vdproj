@@ -15,20 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_1352D93F71202D3D5A855F046211F5B3"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_1352D93F71202D3D5A855F046211F5B3"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_1EC701720A40ED572FB28C537751A4E8"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1EC701720A40ED572FB28C537751A4E8"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,13 +58,31 @@
         "Entry"
         {
         "MsmKey" = "8:_44C5BF9E871CAC3E7E875E8EC6E62D47"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_44C5BF9E871CAC3E7E875E8EC6E62D47"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4BF06AC3D5E23CFD07D2CAF46508BCCC"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4BF06AC3D5E23CFD07D2CAF46508BCCC"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,7 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_8AC7C937B6BF525467C6051FE8FA9346"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,19 +112,43 @@
         "Entry"
         {
         "MsmKey" = "8:_B1828E2C8E2D21059BB17F0FD14D1235"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DCA7430159F046D9A0732213B758AA73"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E4F20ABD0240B6F5204E670AA090D1FE"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E4F20ABD0240B6F5204E670AA090D1FE"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_ECBD956C813A1E750CF60BFDD0107573"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ECBD956C813A1E750CF60BFDD0107573"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F51332BE19304019B18A8637C0AD5325"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,7 +160,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_050BC04AED464803844EDF0E4D6658E5"
+        "OwnerKey" = "8:_175FF37A60174D9E831AEAE7103E1289"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6877D96D155C4C2B9022492F09BD88E5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -396,6 +456,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6877D96D155C4C2B9022492F09BD88E5"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SwiftMiX, Version=1.81.0.0, Culture=neutral, PublicKeyToken=f2f0d89b9539a9ee, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_6877D96D155C4C2B9022492F09BD88E5"
+                    {
+                    "Name" = "8:SwiftMiX.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\SwiftMiX\\bin\\x86\\Release\\app.publish\\SwiftMiX.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_621D06691D9B432B92868824A47A04EC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8AC7C937B6BF525467C6051FE8FA9346"
             {
             "AssemblyRegister" = "3:1"
@@ -478,6 +569,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DCA7430159F046D9A0732213B758AA73"
+            {
+            "SourcePath" = "8:help.html"
+            "TargetName" = "8:help.html"
+            "Tag" = "8:"
+            "Folder" = "8:_621D06691D9B432B92868824A47A04EC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E4F20ABD0240B6F5204E670AA090D1FE"
             {
             "AssemblyRegister" = "3:1"
@@ -538,6 +649,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F51332BE19304019B18A8637C0AD5325"
+            {
+            "SourcePath" = "8:SwiftMiX.ico"
+            "TargetName" = "8:SwiftMiX.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_621D06691D9B432B92868824A47A04EC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5E383E7B7284BB5AEC947D234270AC7"
@@ -627,15 +758,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SwiftMiX"
-        "ProductCode" = "8:{A2C1D0ED-C13D-40E7-9179-1C6A93205135}"
-        "PackageCode" = "8:{6FDF6D2C-98D8-44FA-99F4-A42C4EFDB7B7}"
+        "ProductCode" = "8:{DEF7EFB4-7A37-452A-B37E-BBFB122FF8AD}"
+        "PackageCode" = "8:{9205732D-12B0-45AE-8BC9-89F9A21140CE}"
         "UpgradeCode" = "8:{BC09B001-2D4D-4927-BC33-B20410497D79}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.80"
+        "ProductVersion" = "8:1.81"
         "Manufacturer" = "8:Discrete-Time Systems"
         "ARPHELPTELEPHONE" = "8:dxzl@live.com"
         "ARPHELPLINK" = "8:"
@@ -644,9 +775,9 @@
         "ARPCONTACT" = "8:Scott Swift"
         "Keywords" = "8:SwiftMiX"
         "ARPCOMMENTS" = "8:Simultaneously mix between two audio players"
-        "ARPURLINFOABOUT" = "8:https://github.com/dxzl"
-        "ARPPRODUCTICON" = "8:"
-        "ARPIconIndex" = "3:32512"
+        "ARPURLINFOABOUT" = "8:https://github.com/dxzl/swiftmix-sharp"
+        "ARPPRODUCTICON" = "8:_F51332BE19304019B18A8637C0AD5325"
+        "ARPIconIndex" = "3:0"
         "SearchPath" = "8:..\\SwiftMiX\\bin\\x86\\Release"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
@@ -762,18 +893,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_720E8500397947FD8ACEEB407545112F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0FD670BBB7F9486790964877933E91FB"
             {
             "Name" = "8:SwiftMiX"
             "Arguments" = "8:"
-            "Description" = "8:Mix between two music players"
+            "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:32512"
+            "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:"
+            "Target" = "8:_6877D96D155C4C2B9022492F09BD88E5"
             "Folder" = "8:_8554F558B04A456CBC4A4F3C2F3F6F17"
             "WorkingFolder" = "8:_621D06691D9B432B92868824A47A04EC"
-            "Icon" = "8:"
+            "Icon" = "8:_F51332BE19304019B18A8637C0AD5325"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_85653D31154748ABBC03E6114D0C05BC"
+            {
+            "Name" = "8:SwiftMiX"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_6877D96D155C4C2B9022492F09BD88E5"
+            "Folder" = "8:_B58AD4A41B4E4AA29D4D5DBBB3B34020"
+            "WorkingFolder" = "8:_621D06691D9B432B92868824A47A04EC"
+            "Icon" = "8:_F51332BE19304019B18A8637C0AD5325"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D7A59EADCAAE4809A0D8CFB2467E5BE5"
@@ -786,20 +931,6 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_F5E383E7B7284BB5AEC947D234270AC7"
             "Folder" = "8:_8554F558B04A456CBC4A4F3C2F3F6F17"
-            "WorkingFolder" = "8:_621D06691D9B432B92868824A47A04EC"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F29D5938C4B2471B8B1580D03B646472"
-            {
-            "Name" = "8:SwiftMiX"
-            "Arguments" = "8:"
-            "Description" = "8:Mix between two music players"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:32512"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:"
-            "Folder" = "8:_B58AD4A41B4E4AA29D4D5DBBB3B34020"
             "WorkingFolder" = "8:_621D06691D9B432B92868824A47A04EC"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -1213,7 +1344,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_050BC04AED464803844EDF0E4D6658E5"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_175FF37A60174D9E831AEAE7103E1289"
             {
             "SourcePath" = "8:..\\SwiftMiX\\obj\\x86\\Release\\SwiftMiX.exe"
             "TargetName" = "8:"
@@ -1239,7 +1370,6 @@
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
-                "ExcludeFilter" = "8:*.exe"
                 }
             }
         }
